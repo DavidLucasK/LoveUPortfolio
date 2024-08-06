@@ -34,15 +34,23 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.167);
 }
 
-.logo h1 {
-    margin: 0;
-    margin-left: 20px;
-    color: white;
-    transition: 0.3s ease-in-out;
+.logo {
+    display: flex;
+  }
+  
+.logo h1, .logo img {
+margin: 0;
+margin-left: 20px;
+color: white;
+transition: 0.3s ease-in-out;
 }
 
-.logo h1:hover {
-    opacity: 0.8;
+.logo img {
+filter: invert();
+}
+
+.logo h1:hover, .logo img:hover {
+opacity: 0.8;
 }
 
 .profile-icon img {
