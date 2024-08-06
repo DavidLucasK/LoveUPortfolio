@@ -33,7 +33,7 @@ async function fetchQuestions() {
 // Função para buscar o status do quiz
 async function fetchQuizStatus() {
     try {
-        const response = await fetch(`${backendUrl}/quiz-status`, {
+        const response = await fetch(`${backendUrl}/quiz-status-test`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ async function fetchQuizStatus() {
 // Função para atualizar o status do quiz
 async function updateQuizStatus() {
     try {
-        const response = await fetch(`${backendUrl}/update-quiz-status`, {
+        const response = await fetch(`${backendUrl}/update-quiz-status-test`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -150,14 +150,14 @@ function prevQuestion() {
 // Função para atualizar os pontos no endpoint
 async function updatePoints() {
     try {
-        const response = await fetch(`${backendUrl}/update-points`, {
+        const response = await fetch(`${backendUrl}/update-points-test`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'apiKey': apiKey
             },
             body: JSON.stringify({
-                username: 'amor',
+                username: 'teste',
                 pointsEarned: points
             })
         });

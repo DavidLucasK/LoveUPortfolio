@@ -22,15 +22,15 @@ const textos1 = [
 ];
 
 const textos2 = [
-    'Oi de novo!',
-    'Espero que esteja gostando amor.',
-    'Lembre-se sempre: Eu te amo',
+    'Oiiiii!',
+    'Espero que esteja gostando pessoa aleatória.',
+    'Oque achou? Me de um feedback no Whats',
 ];
 
 const textos3 = [
-    'Bem-vinda novamente gatinha!',
+    'Bem-vindo novamente aleatório!',
     'Estou feliz que você esteja usando o site hehe.',
-    'Tem alguma sugestão pra loja? Me chama!'
+    'Tem alguma sugestão pra loja? Me chama no whats!'
 ];
 
 
@@ -39,7 +39,7 @@ function obterTextos4(lovePoints) {
         return [
             'Oiieee!',
             'Que bom que você está aqui de novo.',
-            'UAU! Você já tem mais de 1000 LovePoints? Parabéns ❤️',
+            'UAU! Você já tem mais de 1000 LovePoints? Parabéns random',
         ];
     } else {
         return [
@@ -111,7 +111,7 @@ const backendUrl = 'https://backendlogindl.vercel.app';
 const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9qeHlmbWJwemp5cGlkdWt6bHFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjIyNTc5NjIsImV4cCI6MjAzNzgzMzk2Mn0._iRG2YBG6bRkYZG27BRbD-KnrAX1aBHqloTvHGlcNKQ'
 async function fetchUserPoints() {
     try {
-        const response = await fetch(`${backendUrl}/api/auth/points`, {
+        const response = await fetch(`${backendUrl}/api/auth/points-test`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

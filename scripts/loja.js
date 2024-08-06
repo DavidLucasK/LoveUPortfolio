@@ -5,7 +5,7 @@ const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJ
 // Função para buscar pontos do usuário
 async function fetchUserPoints() {
     try {
-        const response = await fetch(`${backendUrl}/points`, {
+        const response = await fetch(`${backendUrl}/points-test`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ async function fetchUserPoints() {
 // Função para atualizar pontos no servidor
 async function updatePoints(username, pointsEarned) {
     try {
-        const response = await fetch(`${backendUrl}/update-points`, {
+        const response = await fetch(`${backendUrl}/update-points-test`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -52,13 +52,13 @@ async function updatePoints(username, pointsEarned) {
 // Função para registrar um resgate
 async function insertRedemption(userId, rewardId, pointsRequired) {
     try {
-        const response = await fetch(`${backendUrl}/insert-redemption`, {
+        const response = await fetch(`${backendUrl}/insert-redemption-test`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'apiKey': apiKey,
             },
-            body: JSON.stringify({ userId, rewardId, pointsRequired }),
+            body: JSON.stringify({ rewardId, pointsRequired }),
         });
 
         const data = await response.json();
@@ -80,11 +80,11 @@ async function handleRedemption(button, pointsRequired, rewardId) {
 
     if (currentPoints >= pointsRequired) {
         try {
-            await updatePoints('amor', -pointsRequired);
+            await updatePoints('teste', -pointsRequired);
             await insertRedemption('1', rewardId, pointsRequired);
             console.log("Resgate feito com sucesso");
             Swal.fire({
-                title: "Parabéns gatinha",
+                title: "Parabéns pessoa random",
                 text: "Resgate feito com sucesso!",
                 confirmButtonColor: "#d11507",
                 confirmButtonText: "❤"
@@ -96,7 +96,7 @@ async function handleRedemption(button, pointsRequired, rewardId) {
         console.log("Erro: pontos insuficientes");
         Swal.fire({
             title: "Oops",
-            text: "Você não tem pontos suficientes espertinha kkk",
+            text: "Você não tem pontos suficientes espertinho/a kkk",
             confirmButtonColor: "#d11507",
             confirmButtonText: "❤"
         });
