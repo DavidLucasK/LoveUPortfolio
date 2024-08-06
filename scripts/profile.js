@@ -66,7 +66,7 @@ function uploadImage(file) {
 
 async function fetchUserPoints() {
     try {
-        const response = await fetch(`${backendUrl}/points-teste`, {
+        const response = await fetch(`${backendUrl}/points-test`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
