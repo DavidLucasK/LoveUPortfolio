@@ -97,12 +97,12 @@ main {
   background-color: #e41d69;
   color: white;
   border: none;
+  width: fit-content;
   padding: .5rem 2rem;
   width: 50%;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1em;
-  width: fit-content;
 }
 
 .redeem-button:hover {
