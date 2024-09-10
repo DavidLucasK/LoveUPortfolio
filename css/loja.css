@@ -30,14 +30,22 @@ a {
   text-decoration: none;
 }
 
-.logo h1 {
+.logo {
+  display: flex;
+}
+
+.logo h1, .logo img {
   margin: 0;
   margin-left: 20px;
   color: white;
   transition: 0.3s ease-in-out;
 }
 
-.logo h1:hover {
+.logo img {
+  filter: invert();
+}
+
+.logo h1:hover, .logo img:hover {
   opacity: 0.8;
 }
 
