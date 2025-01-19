@@ -120,7 +120,7 @@ async function handleRedemption(button, pointsRequired, rewardId) {
 // Função para buscar e listar itens da loja
 async function fetchStoreItems() {
     try {
-        const response = await fetch(`${backendUrl}/items`, {
+        const response = await fetch(`${backendUrl}/items/Mazinha02`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
