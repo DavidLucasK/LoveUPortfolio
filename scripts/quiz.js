@@ -6,7 +6,7 @@ let quizStatus = false; // Variável para armazenar o status do quiz
 
 // URLs e API Key
 const backendUrl = 'https://backendlogindl.vercel.app/api/auth';
-const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9qeHlmbWJwemp5cGlkdWt6bHFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjIyNTc5NjIsImV4cCI6MjAzNzgzMzk2Mn0._iRG2YBG6bRkYZG27BRbD-KnrAX1aBHqloTvHGlcNKQ';
+const apiKey = process.env.SUPABASE_API_KEY;
 
 // Função para buscar perguntas do endpoint com método GET
 async function fetchQuestions() {

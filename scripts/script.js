@@ -108,7 +108,8 @@ const hasVisited = localStorage.getItem('hasVisited');
 
 // Recupera os pontos armazenados e adiciona à variável lovePoints
 const backendUrl = 'https://backendlogindl.vercel.app';
-const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9qeHlmbWJwemp5cGlkdWt6bHFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjIyNTc5NjIsImV4cCI6MjAzNzgzMzk2Mn0._iRG2YBG6bRkYZG27BRbD-KnrAX1aBHqloTvHGlcNKQ'
+const apiKey = process.env.SUPABASE_API_KEY;
+
 async function fetchUserPoints() {
     try {
         const response = await fetch(`${backendUrl}/api/auth/points-test`, {
