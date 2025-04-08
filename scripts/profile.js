@@ -1,6 +1,5 @@
 const backendUrl = 'https://backendlogindl.vercel.app/api/auth';
 const uploadUrl = `${backendUrl}/upload`;
-const apiKey = process.env.SUPABASE_API_KEY;
 
 document.addEventListener('DOMContentLoaded', () => {
     const fileInput = document.getElementById('fileInput');
@@ -70,7 +69,6 @@ async function fetchUserPoints() {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'apiKey': apiKey,
             },
         });
 

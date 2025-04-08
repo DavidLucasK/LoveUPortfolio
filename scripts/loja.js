@@ -1,6 +1,5 @@
 // URLs e API Key
 const backendUrl = 'https://backendlogindl.vercel.app/api/auth';
-const apiKey = process.env.SUPABASE_API_KEY;
 
 // Função para buscar pontos do usuário
 async function fetchUserPoints() {
@@ -9,7 +8,6 @@ async function fetchUserPoints() {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'apiKey': apiKey,
             },
         });
 
@@ -32,7 +30,6 @@ async function updatePoints(username, pointsEarned) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'apiKey': apiKey,
             },
             body: JSON.stringify({ username, pointsEarned }),
         });
@@ -56,7 +53,6 @@ async function insertRedemption(userId, rewardId, pointsRequired) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'apiKey': apiKey,
             },
             body: JSON.stringify({ rewardId, pointsRequired }),
         });
@@ -124,7 +120,6 @@ async function fetchStoreItems() {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'apiKey': apiKey,
             },
         });
 

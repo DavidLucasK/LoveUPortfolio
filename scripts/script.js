@@ -108,7 +108,7 @@ const hasVisited = localStorage.getItem('hasVisited');
 
 // Recupera os pontos armazenados e adiciona à variável lovePoints
 const backendUrl = 'https://backendlogindl.vercel.app';
-const apiKey = process.env.SUPABASE_API_KEY;
+
 
 async function fetchUserPoints() {
     try {
@@ -116,7 +116,6 @@ async function fetchUserPoints() {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'apiKey': apiKey,
             },
         });
 
